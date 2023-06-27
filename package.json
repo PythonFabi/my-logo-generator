@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/PythonFabi/my-logo-generator/issues"
   },
-  "homepage": "https://github.com/PythonFabi/my-logo-generator#readme"
+  "homepage": "https://github.com/PythonFabi/my-logo-generator#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
 }
