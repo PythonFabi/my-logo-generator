@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const {Triangle, Circle, Square} = require('./lib/shapes');
 
 const questions = [
     {
@@ -13,7 +14,7 @@ const questions = [
     }, {
         type: 'list',
         message: 'Which of the following three shapes(circle, triangle, and square) should your logo have?',
-        name: 'shapes',
+        name: 'shape',
         choices: ['circle', 'triangle', 'square']
     }, {
         type: 'input',
@@ -23,18 +24,38 @@ const questions = [
 ];
 
 
-function writeToFile(fileName, { text, tcolor, }) {
-const svgTemplate = `<svg version="1.1" 
-width="300" height="200" 
+function writeToFile(fileName, { text, tcolor, shape, scolor}) {
+    let createShape;
+    switch (shape) {
+        case 'circle':
+            createShape = new Circle(scolor);
+            break;
+        case 'triangle':
+            createShape = new Triangle(scolor);
+            break;
+        case 'square':
+            createShape = new Square(scolor);
+            break;
+            default:
+                throw new Error('Invalid shape choice'); 
+    }
 
-xmlns="http://www.w3.org/2000/svg">
 
-<rect width="100%" height="100%" fill="red" />
+    const svgTemplate = `<svg version="1.1" 
+    width="300" height="200" 
 
-<circle cx="150" cy="100" r="80" fill="green" />
+    xmlns="http://www.w3.org/2000/svg">
 
-<text x="150" y="125" font-size="60" text-anchor="middle" fill=${tcolor}>${text}</text>
+    ${createShape.render()}
 
-</svg>;`
+    <text x="150" y="125" font-size="60" text-anchor="middle" fill=${tcolor}>${text}</text>
+
+    </svg>`;
+
+    fs.writeFileSync(fileName, svgTemplate);
 
 }
+
+inquirer.prompt(questions).then((answers) => {
+    writeToFile('./examples/logo.svg', answers);
+}) 
