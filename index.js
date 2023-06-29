@@ -32,14 +32,14 @@ function writeToFile(fileName, { text, tcolor, shape, scolor}) {
     let createShape;
     // switch cases which will choose the classes based on the user input
     switch (shape) {
-        case 'circle':
+        case 'Circle':
             // inside of the class is scolor as a passed argument, since the color of the shape can be chosen too
             createShape = new Circle(scolor);
             break;
-        case 'triangle':
+        case 'Triangle':
             createShape = new Triangle(scolor);
             break;
-        case 'square':
+        case 'Square':
             createShape = new Square(scolor);
             break;
             default:
