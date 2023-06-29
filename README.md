@@ -6,6 +6,7 @@ This Logo Generator allows anyone to create a simple logo quickly, without havin
 You can use this simple terminal application, just by answering prompts to generate a simple logo for you.
 I learned here, how to use Object Oriented Programming to my advantage by creating classes with similar characteristics.
 Writing test was another important part, that helped me write much more efficient code, that can be tested quickly.
+A sample logo is inside the examples folder named 'logo.svg'
 
 ## Table of Contents
 
