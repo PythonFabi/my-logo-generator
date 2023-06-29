@@ -74,4 +74,9 @@ function writeToFile(fileName, { text, tcolor, shape, scolor}) {
 // initialize inquirer, with the questions, which takes the answers to create logo.svg inside the examples folder and passes the answers as arguments in the writeToFile function
 inquirer.prompt(questions).then((answers) => {
     writeToFile('./examples/logo.svg', answers);
-}) 
+    // message displays, when logo is generated
+    console.log('Generated logo.svg');
+    // in case of an error, console displays an error
+}).catch((err) => {
+    console.log(err);
+});
