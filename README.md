@@ -18,16 +18,16 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-[Walkthrough Video](#Walkthrough Video)
+[Walkthrough Video](https://drive.google.com/file/d/1FTukF6rhc2Nz--SsNy2QxbMDE0M3V20L/view)
 
 Copy this project into your repository, initialize npm ('npm init -y') and install inquirer@8.2.4 for the prompts and jest to run the tests. -->('npm i inquirer@8.2.4' & 'npm i jest')
 
 ## Usage
 
 Run the application with 'node index.js' in your terminal in the root directory.
-From there you will be first prompted to enter up to three characters for your logo, then choose the text color, choose between the three shapes: 
+From there you will be first prompted to enter up to three characters for your logo, then choose the text color('keyword or hex color'), choose between the three shapes: 
 "Triangle, Circle and Square",
-and choose the shape color (Recommended to choose colors that you can see on top of another!!!).
+and choose the shape color ('keyword or hex color')(Recommended to choose colors that you can see on top of another!!!).
 
 And voilà! In the examples folder, is your newly generated 'Logo.svg' file.
 
