@@ -3,8 +3,8 @@
 
     xmlns="http://www.w3.org/2000/svg">
 
-    <polygon points="150, 18 244, 182 56, 182" fill="pink" />
+    <circle cx="150" cy="110" r="80" fill="pink" />
 
-    <text x="150" y="125" font-size="40" text-anchor="middle" fill="blue">FAW</text>
+    <text x="150" y="125" font-size="40" text-anchor="middle" fill="purple">FAW</text>
 
     </svg>
