@@ -18,7 +18,7 @@ const questions = [
         message: 'Which of the following three shapes(circle, triangle, and square) should your logo have?',
         name: 'shape',
         // let user choose between those three shapes
-        choices: ['circle', 'triangle', 'square']
+        choices: ['Circle', 'Triangle', 'Square']
     }, {
         type: 'input',
         message: 'What color should the shape be in (color keyword or hexademical number)?',
