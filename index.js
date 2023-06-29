@@ -8,7 +8,14 @@ const questions = [
     {
         type: 'input',
         message: 'Enter up to three characters for your logo!',
-        name: 'text'
+        name: 'text',
+        // validate function to validate user input, if user input is more than three characters, it will return an error message, otherwise it the questions continue
+        validate: function (input) {
+            if (input.length > 3) {
+                return "Please enter up to three characters.";
+            }
+            return true;
+        }
     }, {
         type: 'input',
         message: 'What color should the text be in (color keyword or hexademical number)?',
